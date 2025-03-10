@@ -1,12 +1,9 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-router.get('/users', (req, res) => {
-    res.status(200).json({
-        users: [
-            {id: 1, name: 'John Doe'},
-            {id: 2, name: 'Jane Doe'}
-        ]
-    })
-})
+router.get("/users", (req, res) => {
+  res.render("index", {
+    title: 'Olá Mundo!!'
+  });
+});
 
-module.exports = router
+module.exports = router;
